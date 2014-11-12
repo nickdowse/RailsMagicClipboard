@@ -61,6 +61,6 @@ To find your path you can run `echo $PATH` on the command line. Copy the result 
 
 ### Known Issues
 
-There is an issue with the paths and RVM/rbenv. Sublime Text will not load with the correct paths to find Sass if it is not leaded from the command line. At the moment I am not sure what to do about it, and am happy to hear ideas. The same issue is occuring here https://github.com/badsyntax/SassBeautify/issues/53. You can get around this by opening Sublime Text from the command line, or, if you're hardcore and want to solve the issue permanently, you can follow these instructions: http://unix.stackexchange.com/questions/89076/how-to-set-the-path-osx-applications-use/89077#89077.
+There is an issue with the paths and RVM/rbenv. Sublime Text will not load with the correct paths to find Sass if it is not loaded from the command line. At the moment I am not sure what to do about it, and am happy to hear ideas. The same issue is occuring here https://github.com/badsyntax/SassBeautify/issues/53. You can get around this by opening Sublime Text from the command line, or, if you're hardcore and want to solve the issue permanently, you can follow these instructions: http://unix.stackexchange.com/questions/89076/how-to-set-the-path-osx-applications-use/89077#89077.
 
 If you find more, create an issue or let me know on twitter ([@nmdowse](http://www.twitter.com/nmdowse "Nick Dowse twitter")). Most of the hard work was done by the creators and maintainers of SassBeautify, another great Sublime Text Plugin. So, thanks to them!
