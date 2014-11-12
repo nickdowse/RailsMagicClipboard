@@ -63,6 +63,7 @@ class CssToSassCommand(sublime_plugin.TextCommand):
 
   def get_env(self):
     env = os.environ.copy()
+    self.settings = sublime.load_settings('Css2Sass.sublime-settings')
     if self.settings.get('path', False):
       env['PATH'] = self.settings.get('path')
     return env
