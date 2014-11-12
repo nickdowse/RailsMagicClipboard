@@ -6,7 +6,7 @@ import re
 
 class CssToSassCommand(sublime_plugin.TextCommand):
   def run(self, edit):
-    if self.view.file_name() and self.view.file_name().endswith(".css.sass"):
+    if self.view.file_name() and (self.view.file_name().endswith(".css.sass") or self.view.file_name().endswith(".js.coffee")):
       edit_sass = edit
       self.convert_to_sass(sublime.get_clipboard(), edit_sass)
     else:
@@ -16,14 +16,27 @@ class CssToSassCommand(sublime_plugin.TextCommand):
   def convert_to_sass(self, text, edit_sass):
     if ";" in text:
       thread = ExecSassCommand(
-            'sass-convert',
+            self.get_cmd(),
             self.get_env(),
             text
         )
       thread.start()
       sass_text = self.check_thread(thread, edit_sass)
 
+  def get_cmd(self):
+    if(self.view.file_name().endswith(".css.sass")):
+      return "sass-convert"
+    elif (self.view.file_name().endswith(".js.coffee")):
+      return "js2coffee"
+    else:
+      sublime.error_message("Not sure how you got here, but you're trying to insert into an unsupported file type.")
 
+  def get_env(self):
+    env = os.environ.copy()
+    self.settings = sublime.load_settings('Css2Sass.sublime-settings')
+    if self.settings.get('path', False):
+      env['PATH'] = self.settings.get('path')
+    return env
 
   def check_thread(self, thread, edit_sass, i=0, dir=1):
     before = i % 8
@@ -61,13 +74,6 @@ class CssToSassCommand(sublime_plugin.TextCommand):
 
       output = '\n'.join(output.splitlines())
       return output
-
-  def get_env(self):
-    env = os.environ.copy()
-    self.settings = sublime.load_settings('Css2Sass.sublime-settings')
-    if self.settings.get('path', False):
-      env['PATH'] = self.settings.get('path')
-    return env
 
 class ExecSassCommand(threading.Thread):
 
