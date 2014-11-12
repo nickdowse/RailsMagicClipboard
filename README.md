@@ -61,4 +61,6 @@ To find your path you can run `echo $PATH` on the command line. Copy the result 
 
 ### Known Issues
 
-None yet. If you disagree, create an issue or let me know on twitter ([@nmdowse](http://www.twitter.com/nmdowse "Nick Dowse twitter")). Most of the hard work was done by the creators and maintainers of SassBeautify, another great Sublime Text Plugin. So, thanks to them!
+There is an issue with the paths and RVM/rbenv. Sometimes the sass gem cannot be found in your path. At the moment I am not sure what to do about it, and am happy to hear ideas. The same issue is occuring here https://github.com/badsyntax/SassBeautify/issues/53. You can get around this by opening Sublime Text from the Css2Sass package folder.
+
+If you find more, create an issue or let me know on twitter ([@nmdowse](http://www.twitter.com/nmdowse "Nick Dowse twitter")). Most of the hard work was done by the creators and maintainers of SassBeautify, another great Sublime Text Plugin. So, thanks to them!
