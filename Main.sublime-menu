@@ -1,0 +1,69 @@
+[
+  {
+    "caption":"Preferences",
+    "mnemonic":"n",
+    "id":"preferences",
+    "children":[
+      {
+        "caption":"Package Settings",
+        "mnemonic":"P",
+        "id":"package-settings",
+        "children":[
+          {
+            "caption":"Css2Sass",
+            "children":[
+              {
+                "command":"open_file",
+                "args":{
+                  "file":"${packages}/Css2Sass/Css2Sass.sublime-settings"
+                },
+                "caption":"Settings – Default"
+              },
+              {
+                "command":"open_file",
+                "args":{
+                  "file":"${packages}/User/Css2Sass.sublime-settings"
+                },
+                "caption":"Settings – User"
+              },
+              {
+                "caption":"-"
+              },
+              {
+                "command":"open_file",
+                "args":{
+                  "file":"${packages}/Css2Sass/Default.sublime-keymap"
+                },
+                "caption":"Key Bindings – Default"
+              },
+              {
+                "command":"open_file",
+                "args":{
+                  "file":"${packages}/Css2Sass/Default (Windows).sublime-keymap",
+                  "platform":"Windows"
+                },
+                "caption":"Key Bindings – User"
+              },
+              {
+                "command":"open_file",
+                "args":{
+                  "file":"${packages}/Css2Sass/Default (OSX).sublime-keymap",
+                  "platform":"OSX"
+                },
+                "caption":"Key Bindings – User"
+              },
+              {
+                "command":"open_file",
+                "args":{
+                  "file":"${packages}/Css2Sass/Default (Linux).sublime-keymap",
+                  "platform":"Linux"
+                },
+                "caption":"Key Bindings – User"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

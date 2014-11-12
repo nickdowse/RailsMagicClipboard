@@ -1,5 +1,5 @@
 [
-    { 
+  {
 		"keys": ["super+k+v"], "command": "css_to_sass"
 	}
 ]
