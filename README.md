@@ -3,11 +3,11 @@ Css2Sass
 
 Sublime text plugin to convert CSS in the clipboard to SASS on your screen.
 
+![demo](images/Css2Sass.gif)
+
 ### Installation
 
-To install, well, come talk to me and I'll sort it out for you. Soon it'll be in package control.
-
-Or, if you'd like to go it alone...
+To install, well, come talk to me and I'll sort it out for you. Soon it'll be in package control. Read on for more options.
 
 ###### Installing through package control
 
@@ -15,7 +15,7 @@ Coming soon...
 
 ###### Installing the hard way
 
-1. Clone repository to your sublime text packages directory.
+1. Clone repository to your Sublime Text Packages directory.
 2. Follow all other instructions.
 
 ### Usage
@@ -35,9 +35,6 @@ This plugin is intended to be very much a background worker. To that end, I reco
 ```
 
 From there, you can start pasting raw CSS into your .css.sass files and be amazed as pure sass goodness is pasted into your file, and all text pasted into other files will be pasted in as usual (so no worries there!)
-
-
-![demo](images/Css2Sass.gif)
 
 ### Setup Issues
 
