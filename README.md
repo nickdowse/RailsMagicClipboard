@@ -1,13 +1,13 @@
 Css2Sass
 ========
 
-Sublime text plugin to convert CSS in the clipboard to SASS on your screen.
+Sublime text plugin to convert CSS in the clipboard to SASS on your screen. Also supports converting javascript to coffeescript in the same manner.
 
 ![demo](images/Css2Sass.gif)
 
 ### Installation
 
-To install, well, come talk to me and I'll sort it out for you. Soon it'll be in package control. Read on for more options.
+To install, well, come talk to me and I'll sort it out for you. Soon it'll be in package control. Read on for more options, and see the sections below and the 'Setup Issues' section for more information.
 
 ###### Installing through package control
 
@@ -40,7 +40,17 @@ From there, you can start pasting raw CSS into your .css.sass files and be amaze
 
 ###### Sass Gem
 
-You must have the sass gem installed to use this plugin. Internally, we use the `sass-convert` command, which requires the sass gem. To install the sass gem visit http://sass-lang.com/install
+You must have the sass gem installed to use the CSS to SASS feature of this plugin. Internally, we use the `sass-convert` command, which requires the sass gem. To install the sass gem visit http://sass-lang.com/install.
+
+###### Converting JS to CoffeeScript
+
+To use the JS to Coffeescript automagical conversion you need to have the `js2coffee` Node Package Module installed (https://www.npmjs.org/package/js2coffee). If you don't have js2coffee installed, you can easily install it with the following command:
+
+```bash
+$ npm install -g js2coffee
+```
+
+If you don't have npm installed then you can follow the instructions here http://blog.npmjs.org/post/85484771375/how-to-install-npm. 
 
 ###### Ruby Version Managers
 
