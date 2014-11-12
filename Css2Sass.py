@@ -56,6 +56,7 @@ class CssToSassCommand(sublime_plugin.TextCommand):
         error = error.decode('utf-8')
 
       if returncode != 0:
+        sublime.error_message(error)
         return False
 
       output = '\n'.join(output.splitlines())
