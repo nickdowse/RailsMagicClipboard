@@ -4,7 +4,7 @@ import subprocess
 import threading
 import re
 
-class CssToSassCommand(sublime_plugin.TextCommand):
+class ConvertToTemplatedCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     if self.view.file_name() and (self.view.file_name().endswith(".css.sass") or self.view.file_name().endswith(".js.coffee") or self.view.file_name().endswith(".html.haml")):
       edit_sass = edit
