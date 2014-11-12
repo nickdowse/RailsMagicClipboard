@@ -47,4 +47,4 @@ To find your path you can run `echo $PATH` on the command line. Copy the result 
 
 ### Known Issues
 
-None yet. If you disagree, create an issue or let me know on twitter ([@nmdowse](http://www.twitter.com/nmdowse "Nick Dowse twitter"))
+None yet. If you disagree, create an issue or let me know on twitter ([@nmdowse](http://www.twitter.com/nmdowse "Nick Dowse twitter")). Most of the hard work was done by the creators and maintainers of SassBeautify, another great Sublime Text Plugin. So, thanks to them!
