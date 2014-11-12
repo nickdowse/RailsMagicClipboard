@@ -3,6 +3,8 @@ Css2Sass
 
 Sublime text plugin to convert CSS to SASS from paste.
 
+### Installation
+
 To install, well, come talk to me and I'll sort it out for you. Soon it'll be in package control.
 
 ### Usage
