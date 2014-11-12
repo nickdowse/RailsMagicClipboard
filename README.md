@@ -1,7 +1,7 @@
 Css2Sass
 ========
 
-Sublime text plugin to convert CSS in the clipboard to SASS on your screen. Also supports converting JavaScript to CoffeeScript in the same manner. Also supports HTML to HAML.
+Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS, CoffeeScript or HAML on your screen.
 
 ![demo](images/Css2Sass.gif)
 
@@ -20,7 +20,7 @@ Coming soon...
 
 ### Usage
 
-Insert CSS, Javascript or HTML from your clipboard into a .css.sass, .js.coffee or .html.haml file using `"super+k+v"`. The copied data will be inserted into your file as SASS, CoffeeScript, and HAML respectively. Perfect for copying straight from Stack Overflow.
+Insert CSS, Javascript or HTML (including from .html.erb files) from your clipboard into a .css.sass, .js.coffee or .html.haml file using `"super+k+v"`. The copied data will be inserted into your file as SASS, CoffeeScript, and HAML respectively. Perfect for copying straight from Stack Overflow.
 
 This plugin is intended to be very much a background worker. To that end, I recommend mapping `"super+v"` to the `"convert_to_templated"` command in your user key bindings. 
 
@@ -34,7 +34,7 @@ This plugin is intended to be very much a background worker. To that end, I reco
 ]
 ```
 
-From there, you can start pasting raw CSS into your .css.sass files and be amazed as pure sass goodness is pasted into your file, and all text pasted into other files will be pasted in as usual (so no worries there!)
+From there, you can start pasting raw CSS into your .css.sass files and be amazed as pure sass goodness is pasted into your file, and all text pasted into other files will be pasted in as usual (so no worries there!) Same magical goodness applies to the other supported formats.
 
 ### Setup Issues
 
@@ -54,9 +54,7 @@ If you don't have npm installed then you can follow the instructions here http:/
 
 ###### Converting HTML to HAML
 
-To use the HTML to HAML features of this plugin you need to have the HAML gem installed (`gem install haml`). Recently however the Html2Haml functionality has been stripped out into its own gem, unsurprisingly called html2haml. If you have errors trying to insert html text into your haml file, this will probably be the issue.
-
-Installing the htmt2haml gem in the standard way: `gem install html2haml` should fix the issue. If not, raise a github issue!
+To use the HTML to HAML features of this plugin you need to have the HAML gem installed (`gem install haml`). If you're still having problems it might be because recently the HTML to HAML functionality has been stripped out into its own gem, unsurprisingly called html2haml. Installing the htmt2haml gem in the standard way (`gem install html2haml`) should fix the issue. If not, raise a github issue with me!
 
 ###### Ruby Version Managers
 
