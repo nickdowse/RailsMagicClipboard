@@ -9,7 +9,7 @@ To install, well, come talk to me and I'll sort it out for you. Soon it'll be in
 
 Insert CSS from your clipboard into a .css.sass file using `"super+k+v"`. The CSS will be inserted into your file as SASS. Perfect for copying straight from Stack Overflow.
 
-This plugin is intended to be very much a background worker. To that end, I recommend mapping `"super+v"` to the `"css\_to_sass"` command in your user key bindings. 
+This plugin is intended to be very much a background worker. To that end, I recommend mapping `"super+v"` to the `"css_to_sass"` command in your user key bindings. 
 
 ```json
 # Preferences/Key Bindings - User
