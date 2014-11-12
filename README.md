@@ -21,9 +21,7 @@ This plugin is intended to be very much a background worker. To that end, I reco
 ]
 ```
 
-From there, you can start pasting raw CSS into your .css.sass files and be amazed as pure sass goodness is pasted into your file.
-
-This will only transform text pasted into .css.sass files, all text pasted into other files will be pasted in as usual (so no worries there!)
+From there, you can start pasting raw CSS into your .css.sass files and be amazed as pure sass goodness is pasted into your file, and all text pasted into other files will be pasted in as usual (so no worries there!)
 
 ### Setup Issues
 
