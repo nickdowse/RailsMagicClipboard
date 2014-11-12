@@ -6,7 +6,7 @@ import re
 
 class CssToSassCommand(sublime_plugin.TextCommand):
   def run(self, edit):
-    if self.view.file_name().endswith(".css.sass"):
+    if self.view.file_name() and self.view.file_name().endswith(".css.sass"):
       edit_sass = edit
       self.convert_to_sass(sublime.get_clipboard(), edit_sass)
     else:
