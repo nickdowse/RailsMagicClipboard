@@ -7,6 +7,17 @@ Sublime text plugin to convert CSS in the clipboard to SASS on your screen.
 
 To install, well, come talk to me and I'll sort it out for you. Soon it'll be in package control.
 
+Or, if you'd like to go it alone...
+
+###### Installing through package control
+
+Coming soon...
+
+###### Installing the hard way
+
+1. Clone repository to your sublime text packages directory.
+2. Follow all other instructions.
+
 ### Usage
 
 Insert CSS from your clipboard into a .css.sass file using `"super+k+v"`. The CSS will be inserted into your file as SASS. Perfect for copying straight from Stack Overflow.
