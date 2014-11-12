@@ -6,7 +6,7 @@ import re
 
 class CssToSassCommand(sublime_plugin.TextCommand):
   def run(self, edit):
-    if self.view.file_name() and (self.view.file_name().endswith(".css.sass") or self.view.file_name().endswith(".js.coffee")):
+    if self.view.file_name() and (self.view.file_name().endswith(".css.sass") or self.view.file_name().endswith(".js.coffee") or self.view.file_name().endswith(".html.haml")):
       edit_sass = edit
       self.convert_to_sass(sublime.get_clipboard(), edit_sass)
     else:
@@ -14,7 +14,7 @@ class CssToSassCommand(sublime_plugin.TextCommand):
         self.view.replace(edit, region, sublime.get_clipboard())
 
   def convert_to_sass(self, text, edit_sass):
-    if ";" in text:
+    if (";" in text or "</" in text):
       thread = ExecSassCommand(
             self.get_cmd(),
             self.get_env(),
@@ -28,6 +28,8 @@ class CssToSassCommand(sublime_plugin.TextCommand):
       return "sass-convert"
     elif (self.view.file_name().endswith(".js.coffee")):
       return "js2coffee"
+    elif (self.view.file_name().endswith(".html.haml")):
+      return "html2haml"
     else:
       sublime.error_message("Not sure how you got here, but you're trying to insert into an unsupported file type.")
 
