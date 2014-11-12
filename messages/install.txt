@@ -1,0 +1,13 @@
+Hey, thanks for installing Css2Sass.
+
+To easily convert your Css2Sass all you need to do is copy some CSS from somewhere, then instead of pasting it into the .css.sass file you want it to end up in, use the key combination super+k+v, and voila, your CSS becomes SASS.
+
+For minimising your effort (and maximising ease of use) I recommend binding 'super+v' to the command 'css_to_sass' in your user key bindings. This will allow you to simply paste away as normal and whenever you paste CSS into a .css.sass file it'll automatically be converted to SASS. Wow. #magic.
+
+If you have any questions or queries please let me know at either @nmdowse or me@nickdowse.co.nz
+
+For contributing create a pull request here https://github.com/nickdowse/Css2Sass
+
+Cheers, 
+
+Nick.
