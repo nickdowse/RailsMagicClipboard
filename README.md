@@ -1,7 +1,7 @@
 Css2Sass
 ========
 
-Sublime text plugin to convert CSS to SASS from paste.
+Sublime text plugin to convert CSS in the clipboard to SASS on your screen.
 
 ### Installation
 
