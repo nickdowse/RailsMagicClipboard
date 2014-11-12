@@ -36,7 +36,8 @@ This plugin is intended to be very much a background worker. To that end, I reco
 
 From there, you can start pasting raw CSS into your .css.sass files and be amazed as pure sass goodness is pasted into your file, and all text pasted into other files will be pasted in as usual (so no worries there!)
 
-Check out a screencast of the recommended Css2Sass flow here: https://www.dropbox.com/s/2hletdejlk0f0ww/Css2Sass.mov?dl=0
+
+![](https://gfycat.com/DelightfulYoungAngora#?format=gif)
 
 ### Setup Issues
 
