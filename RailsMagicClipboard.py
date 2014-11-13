@@ -9,8 +9,7 @@ class RailsMagicClipboardCommand(sublime_plugin.TextCommand):
     if self.view.file_name() and (self.view.file_name().endswith(".css.sass") or self.view.file_name().endswith(".js.coffee") or self.view.file_name().endswith(".html.haml")):
       self.convert_to_sass(sublime.get_clipboard())
     else:
-      for region in self.view.sel():
-        self.view.replace(edit, region, sublime.get_clipboard())
+      self.view.run_command('paste')
 
   def convert_to_sass(self, text):
     if (";" in text or "</" in text):
@@ -22,7 +21,7 @@ class RailsMagicClipboardCommand(sublime_plugin.TextCommand):
       thread.start()
       self.check_thread(thread)
     else:
-      self.view.run_command('replace_text', {'text': sublime.get_clipboard()})
+      self.view.run_command('paste')
 
   def get_cmd(self):
     if(self.view.file_name().endswith(".css.sass")):
@@ -73,7 +72,7 @@ class RailsMagicClipboardCommand(sublime_plugin.TextCommand):
 
       if returncode != 0:
         print("Error code: {}".format(returncode))
-        self.view.run_command('replace_text', {'text': sublime.get_clipboard()})
+        self.view.run_command('paste')
         sublime.error_message(error)
         return False
 
@@ -112,5 +111,5 @@ class ExecSassCommand(threading.Thread):
 
 class ReplaceTextCommand(sublime_plugin.TextCommand):
   def run(self, edit, text=None):
-    for region in self.view.sel():
-      self.view.replace(edit, region, text)
+    sublime.set_clipboard(text)
+    self.view.run_command('paste')
