@@ -71,6 +71,8 @@ class ConvertToTemplatedCommand(sublime_plugin.TextCommand):
         error = error.decode('utf-8')
 
       if returncode != 0:
+        print("Error code: {}".format(returncode))
+        self.view.run_command('replace_text', {'text': sublime.get_clipboard()})
         sublime.error_message(error)
         return False
 
