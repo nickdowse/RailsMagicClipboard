@@ -7,13 +7,12 @@ import re
 class ConvertToTemplatedCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     if self.view.file_name() and (self.view.file_name().endswith(".css.sass") or self.view.file_name().endswith(".js.coffee") or self.view.file_name().endswith(".html.haml")):
-      edit_sass = edit
-      self.convert_to_sass(sublime.get_clipboard(), edit_sass)
+      self.convert_to_sass(sublime.get_clipboard())
     else:
       for region in self.view.sel():
         self.view.replace(edit, region, sublime.get_clipboard())
 
-  def convert_to_sass(self, text, edit_sass):
+  def convert_to_sass(self, text):
     if (";" in text or "</" in text):
       thread = ExecSassCommand(
             self.get_cmd(),
@@ -21,7 +20,9 @@ class ConvertToTemplatedCommand(sublime_plugin.TextCommand):
             text
         )
       thread.start()
-      sass_text = self.check_thread(thread, edit_sass)
+      self.check_thread(thread)
+    else:
+      self.view.run_command('replace_text', {'text': sublime.get_clipboard()})
 
   def get_cmd(self):
     if(self.view.file_name().endswith(".css.sass")):
@@ -40,7 +41,7 @@ class ConvertToTemplatedCommand(sublime_plugin.TextCommand):
       env['PATH'] = self.settings.get('path')
     return env
 
-  def check_thread(self, thread, edit_sass, i=0, dir=1):
+  def check_thread(self, thread, i=0, dir=1):
     before = i % 8
     after = (7) - before
     if not after:
@@ -55,7 +56,7 @@ class ConvertToTemplatedCommand(sublime_plugin.TextCommand):
     )
 
     if thread.is_alive():
-      return sublime.set_timeout(lambda: self.check_thread(thread, edit_sass, i, dir), 100)
+      return sublime.set_timeout(lambda: self.check_thread(thread, i, dir), 100)
 
     self.view.erase_status('css2sass')
     sass_text = self.handle_process(thread.returncode, thread.stdout, thread.stderr)
