@@ -1,5 +1,5 @@
 [
   {
-    "keys": ["super+k+v"], "command": "convert_to_templated"
+    "keys": ["super+k+v"], "command": "rails_magic_clipboard"
   }
 ]

@@ -1,9 +1,9 @@
-Css2Sass
+RailsMagicClipboard
 ========
 
 Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS, CoffeeScript or HAML on your screen.
 
-![demo](images/Css2Sass.gif)
+![demo](images/RailsMagicClipboard.gif)
 
 ### Installation
 
@@ -22,14 +22,14 @@ Coming soon...
 
 Insert CSS, Javascript or HTML (including from .html.erb files) from your clipboard into a .css.sass, .js.coffee or .html.haml file using `"super+k+v"`. The copied data will be inserted into your file as SASS, CoffeeScript, and HAML respectively. Perfect for copying straight from Stack Overflow.
 
-This plugin is intended to be very much a background worker. To that end, I recommend mapping `"super+v"` to the `"convert_to_templated"` command in your user key bindings. 
+This plugin is intended to be very much a background worker. To that end, I recommend mapping `"super+v"` to the `"rails_magic_clipboard"` command in your user key bindings. 
 
 ```json
 # Preferences/Key Bindings - User
 
 [
     {
-        "keys": ["super+v"], "command": "convert_to_templated"
+        "keys": ["super+v"], "command": "rails_magic_clipboard"
     }
 ]
 ```
@@ -60,10 +60,10 @@ To use the HTML to HAML features of this plugin you need to have the HAML gem in
 
 If you are using RVM or rbenv etc, then you will need to set the path in settings, as RVM/rbenv modify the environment path, which messes with sublimes use of the path.
 
-To find your path you can run `echo $PATH` on the command line. Copy the result then paste it into the Css2Sass user settings file, as shown below.
+To find your path you can run `echo $PATH` on the command line. Copy the result then paste it into the RailsMagicClipboard user settings file, as shown below.
 
 ```json
-# Preferences/Package Settings/Css2Sass/Settings - User
+# Preferences/Package Settings/RailsMagicClipboard/Settings - User
 
 {
     "path": "your/copied/path/here"

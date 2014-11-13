@@ -10,19 +10,19 @@
         "id":"package-settings",
         "children":[
           {
-            "caption":"Css2Sass",
+            "caption":"RailsMagicClipboard",
             "children":[
               {
                 "command":"open_file",
                 "args":{
-                  "file":"${packages}/Css2Sass/Css2Sass.sublime-settings"
+                  "file":"${packages}/RailsMagicClipboard/RailsMagicClipboard.sublime-settings"
                 },
                 "caption":"Settings – Default"
               },
               {
                 "command":"open_file",
                 "args":{
-                  "file":"${packages}/User/Css2Sass.sublime-settings"
+                  "file":"${packages}/User/RailsMagicClipboard.sublime-settings"
                 },
                 "caption":"Settings – User"
               },
@@ -32,14 +32,14 @@
               {
                 "command":"open_file",
                 "args":{
-                  "file":"${packages}/Css2Sass/Default.sublime-keymap"
+                  "file":"${packages}/RailsMagicClipboard/Default.sublime-keymap"
                 },
                 "caption":"Key Bindings – Default"
               },
               {
                 "command":"open_file",
                 "args":{
-                  "file":"${packages}/Css2Sass/Default (Windows).sublime-keymap",
+                  "file":"${packages}/RailsMagicClipboard/Default (Windows).sublime-keymap",
                   "platform":"Windows"
                 },
                 "caption":"Key Bindings – User"
@@ -47,7 +47,7 @@
               {
                 "command":"open_file",
                 "args":{
-                  "file":"${packages}/Css2Sass/Default (OSX).sublime-keymap",
+                  "file":"${packages}/RailsMagicClipboard/Default (OSX).sublime-keymap",
                   "platform":"OSX"
                 },
                 "caption":"Key Bindings – User"
@@ -55,7 +55,7 @@
               {
                 "command":"open_file",
                 "args":{
-                  "file":"${packages}/Css2Sass/Default (Linux).sublime-keymap",
+                  "file":"${packages}/RailsMagicClipboard/Default (Linux).sublime-keymap",
                   "platform":"Linux"
                 },
                 "caption":"Key Bindings – User"

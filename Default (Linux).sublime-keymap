@@ -1,6 +1,6 @@
 [
   {
-		"keys": ["super+k+v"], "command": "css_to_sass"
+		"keys": ["super+k+v"], "command": "rails_magic_clipboard"
 	}
 ]
 

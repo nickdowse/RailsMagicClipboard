@@ -4,7 +4,7 @@ import subprocess
 import threading
 import re
 
-class ConvertToTemplatedCommand(sublime_plugin.TextCommand):
+class RailsMagicClipboardCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     if self.view.file_name() and (self.view.file_name().endswith(".css.sass") or self.view.file_name().endswith(".js.coffee") or self.view.file_name().endswith(".html.haml")):
       self.convert_to_sass(sublime.get_clipboard())
@@ -51,14 +51,14 @@ class ConvertToTemplatedCommand(sublime_plugin.TextCommand):
     i += dir
 
     self.view.set_status(
-        'css2sass',
-        'Css2Sass [%s=%s]' % (' ' * before, ' ' * after)
+        'rails_magic_clipboard',
+        'RailsMagicClipboard [%s=%s]' % (' ' * before, ' ' * after)
     )
 
     if thread.is_alive():
       return sublime.set_timeout(lambda: self.check_thread(thread, i, dir), 100)
 
-    self.view.erase_status('css2sass')
+    self.view.erase_status('rails_magic_clipboard')
     sass_text = self.handle_process(thread.returncode, thread.stdout, thread.stderr)
     self.view.run_command('replace_text', {'text': sass_text})
 
