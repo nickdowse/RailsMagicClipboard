@@ -5,6 +5,9 @@ Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS,
 
 ![demo](images/RailsMagicClipboard.gif)
 
+> "The best Sublime Text plugin I have ever used. Saved me 5 minutes already in the past 5 minutes."
+> - @jrnbs
+
 ### Installation
 
 Until it is in Package Control either come talk to me and I'll help you install it, or read on for more options. Don't forget to read the sections below and the 'Setup Issues' section for more essential install information.
