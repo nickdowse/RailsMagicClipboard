@@ -7,7 +7,7 @@ Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS,
 
 ### Installation
 
-To install, well, come talk to me and I'll sort it out for you. Soon it'll be in package control. Read on for more options, and see the sections below and the 'Setup Issues' section for more information.
+Until it is in Package Control either come talk to me and I'll help you install it, or read on for more options. Don't forget to read the sections below and the 'Setup Issues' section for more essential install information.
 
 ###### Installing through package control
 
@@ -22,7 +22,7 @@ Coming soon...
 
 Insert CSS, Javascript or HTML (including from .html.erb files) from your clipboard into a .css.sass, .js.coffee or .html.haml file using `"super+k+v"`. The copied data will be inserted into your file as SASS, CoffeeScript, and HAML respectively. Perfect for copying straight from Stack Overflow.
 
-This plugin is intended to be very much a background worker. To that end, I recommend mapping `"super+v"` to the `"rails_magic_clipboard"` command in your user key bindings. 
+This plugin is intended to be very much something you install and forget about until your co-worker leans over your shoulder and is absolutely amazed. To that end, I recommend mapping `"super+v"` to the `"rails_magic_clipboard"` command in your user key bindings. This mapping is of course completely optional. 
 
 ```json
 # Preferences/Key Bindings - User
