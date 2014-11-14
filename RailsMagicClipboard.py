@@ -6,13 +6,13 @@ import re
 
 class RailsMagicClipboardCommand(sublime_plugin.TextCommand):
   def run(self, edit):
-    if self.view.file_name() and (self.view.file_name().endswith(".css.sass") or self.view.file_name().endswith(".js.coffee") or self.view.file_name().endswith(".html.haml")):
+    if self.view.file_name() and (self.view.file_name().endswith(".sass") or self.view.file_name().endswith(".coffee") or self.view.file_name().endswith(".haml")):
       self.convert_to_sass(sublime.get_clipboard())
     else:
       self.view.run_command('paste')
 
   def convert_to_sass(self, text):
-    if (";" in text or "</" in text):
+    if (self.should_convert(text)):
       thread = ExecSassCommand(
             self.get_cmd(),
             self.get_env(),
@@ -23,12 +23,17 @@ class RailsMagicClipboardCommand(sublime_plugin.TextCommand):
     else:
       self.view.run_command('paste')
 
+  def should_convert(self, text):
+    if (((";" in text) and (self.view.file_name().endswith(".sass") or self.view.file_name().endswith(".coffee"))) or (("</" in text) and self.view.file_name().endswith(".haml"))):
+      return True
+    return False
+
   def get_cmd(self):
-    if(self.view.file_name().endswith(".css.sass")):
+    if(self.view.file_name().endswith(".sass")):
       return "sass-convert"
-    elif (self.view.file_name().endswith(".js.coffee")):
+    elif (self.view.file_name().endswith(".coffee")):
       return "js2coffee"
-    elif (self.view.file_name().endswith(".html.haml")):
+    elif (self.view.file_name().endswith(".haml")):
       return "html2haml"
     else:
       sublime.error_message("Not sure how you got here, but you're trying to insert into an unsupported file type.")
