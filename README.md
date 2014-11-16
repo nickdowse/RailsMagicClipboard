@@ -10,16 +10,16 @@ Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS,
 
 ### Installation
 
-Until it is in Package Control either come talk to me and I'll help you install it, or read on for more options. Don't forget to read the sections below and the 'Setup Issues' section for more essential install information.
-
 ###### Installing through package control
 
-Coming soon...
+1. In Sublime Text open up the package control menu bar (`super+shift+p`) and type `install package`
+2. Search for `RailsMagicClipboard`, and click on it to install the package.
+3. Look through the setup issues to see if you need to install any extra services.
 
 ###### Installing the hard way
 
-1. Clone repository to your Sublime Text Packages directory.
-2. Follow all other instructions.
+1. Clone this repository to your Sublime Text Packages directory.
+2. Follow all other instructions (especially the _Setup Issues_ section!)
 
 ### Usage
 
