@@ -1,34 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <title>Railsmagicclipboard by nickdowse</title>
 
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <title>Railsmagicclipboard by nickdowse</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
+    <div class="wrapper">
+      <header>
         <h1>Railsmagicclipboard</h1>
-        <h2>Sublime text plugin to convert HTML to HAML, CSS to SASS and JavaScript to CoffeeScript on paste.</h2>
-        <a href="https://github.com/nickdowse/RailsMagicClipboard" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+        <p>Sublime text plugin to convert HTML to HAML, CSS to SASS and JavaScript to CoffeeScript on paste.</p>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+        <p class="view"><a href="https://github.com/nickdowse/RailsMagicClipboard">View the Project on GitHub <small>nickdowse/RailsMagicClipboard</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nickdowse/RailsMagicClipboard/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nickdowse/RailsMagicClipboard/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nickdowse/RailsMagicClipboard">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
 <a id="railsmagicclipboard" class="anchor" href="#railsmagicclipboard" aria-hidden="true"><span class="octicon octicon-link"></span></a>RailsMagicClipboard</h1>
 
 <p>Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS, CoffeeScript or HAML on your screen.</p>
@@ -45,13 +45,13 @@
 
 <p>Until it is in Package Control either come talk to me and I'll help you install it, or read on for more options. Don't forget to read the sections below and the 'Setup Issues' section for more essential install information.</p>
 
-<h6>
-<a id="installing-through-package-control" class="anchor" href="#installing-through-package-control" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing through package control</h6>
+<h5>
+<a id="installing-through-package-control" class="anchor" href="#installing-through-package-control" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing through package control</h5>
 
 <p>Coming soon...</p>
 
-<h6>
-<a id="installing-the-hard-way" class="anchor" href="#installing-the-hard-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing the hard way</h6>
+<h5>
+<a id="installing-the-hard-way" class="anchor" href="#installing-the-hard-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing the hard way</h5>
 
 <ol>
 <li>Clone repository to your Sublime Text Packages directory.</li>
@@ -78,13 +78,13 @@
 <h3>
 <a id="setup-issues" class="anchor" href="#setup-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup Issues</h3>
 
-<h6>
-<a id="converting-css-to-sass" class="anchor" href="#converting-css-to-sass" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting CSS to SASS</h6>
+<h5>
+<a id="converting-css-to-sass" class="anchor" href="#converting-css-to-sass" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting CSS to SASS</h5>
 
 <p>You must have the sass gem installed to use the CSS to SASS feature of this plugin. Internally, we use the <code>sass-convert</code> command, which requires the sass gem. To install the sass gem visit <a href="http://sass-lang.com/install">http://sass-lang.com/install</a>.</p>
 
-<h6>
-<a id="converting-js-to-coffeescript" class="anchor" href="#converting-js-to-coffeescript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting JS to CoffeeScript</h6>
+<h5>
+<a id="converting-js-to-coffeescript" class="anchor" href="#converting-js-to-coffeescript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting JS to CoffeeScript</h5>
 
 <p>To use the JS to Coffeescript automagical conversion you need to have the <code>js2coffee</code> Node Package Module installed (<a href="https://www.npmjs.org/package/js2coffee">https://www.npmjs.org/package/js2coffee</a>). If you don't have js2coffee installed, you can easily install it with the following command:</p>
 
@@ -92,13 +92,13 @@
 
 <p>If you don't have npm installed then you can follow the instructions here <a href="http://blog.npmjs.org/post/85484771375/how-to-install-npm">http://blog.npmjs.org/post/85484771375/how-to-install-npm</a>. </p>
 
-<h6>
-<a id="converting-html-to-haml" class="anchor" href="#converting-html-to-haml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting HTML to HAML</h6>
+<h5>
+<a id="converting-html-to-haml" class="anchor" href="#converting-html-to-haml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting HTML to HAML</h5>
 
 <p>To use the HTML to HAML features of this plugin you need to have the HAML gem installed (<code>gem install haml</code>). If you're still having problems it might be because recently the HTML to HAML functionality has been stripped out into its own gem, unsurprisingly called html2haml. Installing the htmt2haml gem in the standard way (<code>gem install html2haml</code>) should fix the issue. If not, raise a github issue with me! Unfortunately at the moment erb flavoured HTML will not be parsed correctly.</p>
 
-<h6>
-<a id="ruby-version-managers" class="anchor" href="#ruby-version-managers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ruby Version Managers</h6>
+<h5>
+<a id="ruby-version-managers" class="anchor" href="#ruby-version-managers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ruby Version Managers</h5>
 
 <p>If you are using RVM or rbenv etc, then you will need to set the path in settings, as RVM/rbenv modify the environment path, which messes with sublimes use of the path.</p>
 
@@ -116,25 +116,23 @@
 <p>There is an issue with the paths and RVM/rbenv. Sublime Text will not load with the correct paths to find Sass if it is not loaded from the command line. At the moment I am not sure what to do about it, and am happy to hear ideas. The same issue is occuring here <a href="https://github.com/badsyntax/SassBeautify/issues/53">https://github.com/badsyntax/SassBeautify/issues/53</a>. You can get around this by opening Sublime Text from the command line, or, if you're hardcore and want to solve the issue permanently, you can follow these instructions: <a href="http://unix.stackexchange.com/questions/89076/how-to-set-the-path-osx-applications-use/89077#89077">http://unix.stackexchange.com/questions/89076/how-to-set-the-path-osx-applications-use/89077#89077</a>.</p>
 
 <p>If you find more, create an issue or let me know on twitter (<a href="http://www.twitter.com/nmdowse" title="Nick Dowse twitter">@nmdowse</a>). Most of the hard work was done by the creators and maintainers of SassBeautify, another great Sublime Text Plugin. So, thanks to them!</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/nickdowse/RailsMagicClipboard/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/nickdowse/RailsMagicClipboard/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/nickdowse/RailsMagicClipboard"></a> is maintained by <a href="https://github.com/nickdowse">nickdowse</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nickdowse">nickdowse</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-50341819-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
 
-  
   </body>
 </html>
