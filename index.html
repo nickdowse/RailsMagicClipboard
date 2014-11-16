@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Railsmagicclipboard by nickdowse</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Railsmagicclipboard</h1>
+        <h2>Sublime text plugin to convert HTML to HAML, CSS to SASS and JavaScript to CoffeeScript on paste.</h2>
+        <a href="https://github.com/nickdowse/RailsMagicClipboard" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="railsmagicclipboard" class="anchor" href="#railsmagicclipboard" aria-hidden="true"><span class="octicon octicon-link"></span></a>RailsMagicClipboard</h1>
+
+<p>Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS, CoffeeScript or HAML on your screen.</p>
+
+<p><img src="images/RailsMagicClipboard.gif" alt="demo"></p>
+
+<blockquote>
+<p>"The best Sublime Text plugin I have ever used. Saved me 5 minutes already in the past 5 minutes." 
+- <a href="https://github.com/jrnbs" class="user-mention">@jrnbs</a></p>
+</blockquote>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Until it is in Package Control either come talk to me and I'll help you install it, or read on for more options. Don't forget to read the sections below and the 'Setup Issues' section for more essential install information.</p>
+
+<h6>
+<a id="installing-through-package-control" class="anchor" href="#installing-through-package-control" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing through package control</h6>
+
+<p>Coming soon...</p>
+
+<h6>
+<a id="installing-the-hard-way" class="anchor" href="#installing-the-hard-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing the hard way</h6>
+
+<ol>
+<li>Clone repository to your Sublime Text Packages directory.</li>
+<li>Follow all other instructions.</li>
+</ol>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>Insert CSS, Javascript or HTML (including from .html.erb files) from your clipboard into a .css.sass, .js.coffee or .html.haml file using <code>"super+k+v"</code>. The copied data will be inserted into your file as SASS, CoffeeScript, and HAML respectively. Perfect for copying straight from Stack Overflow.</p>
+
+<p>This plugin is intended to be very much something you install and forget about until your co-worker leans over your shoulder and is absolutely amazed. To that end, I recommend mapping <code>"super+v"</code> to the <code>"rails_magic_clipboard"</code> command in your user key bindings. This mapping is of course completely optional. </p>
+
+<div class="highlight highlight-json"><pre># Preferences/Key Bindings - User
+
+[
+    {
+        <span class="pl-s1"><span class="pl-pds">"</span>keys<span class="pl-pds">"</span></span>: [<span class="pl-s1"><span class="pl-pds">"</span>super+v<span class="pl-pds">"</span></span>], <span class="pl-s1"><span class="pl-pds">"</span>command<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">"</span>rails_magic_clipboard<span class="pl-pds">"</span></span>
+    }
+]</pre></div>
+
+<p>From there, you can start pasting raw CSS into your .css.sass files and be amazed as pure sass goodness is pasted into your file, and all text pasted into other files will be pasted in as usual (so no worries there!) Same magical goodness applies to the other supported formats.</p>
+
+<h3>
+<a id="setup-issues" class="anchor" href="#setup-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup Issues</h3>
+
+<h6>
+<a id="converting-css-to-sass" class="anchor" href="#converting-css-to-sass" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting CSS to SASS</h6>
+
+<p>You must have the sass gem installed to use the CSS to SASS feature of this plugin. Internally, we use the <code>sass-convert</code> command, which requires the sass gem. To install the sass gem visit <a href="http://sass-lang.com/install">http://sass-lang.com/install</a>.</p>
+
+<h6>
+<a id="converting-js-to-coffeescript" class="anchor" href="#converting-js-to-coffeescript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting JS to CoffeeScript</h6>
+
+<p>To use the JS to Coffeescript automagical conversion you need to have the <code>js2coffee</code> Node Package Module installed (<a href="https://www.npmjs.org/package/js2coffee">https://www.npmjs.org/package/js2coffee</a>). If you don't have js2coffee installed, you can easily install it with the following command:</p>
+
+<div class="highlight highlight-bash"><pre>$ npm install -g js2coffee</pre></div>
+
+<p>If you don't have npm installed then you can follow the instructions here <a href="http://blog.npmjs.org/post/85484771375/how-to-install-npm">http://blog.npmjs.org/post/85484771375/how-to-install-npm</a>. </p>
+
+<h6>
+<a id="converting-html-to-haml" class="anchor" href="#converting-html-to-haml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting HTML to HAML</h6>
+
+<p>To use the HTML to HAML features of this plugin you need to have the HAML gem installed (<code>gem install haml</code>). If you're still having problems it might be because recently the HTML to HAML functionality has been stripped out into its own gem, unsurprisingly called html2haml. Installing the htmt2haml gem in the standard way (<code>gem install html2haml</code>) should fix the issue. If not, raise a github issue with me! Unfortunately at the moment erb flavoured HTML will not be parsed correctly.</p>
+
+<h6>
+<a id="ruby-version-managers" class="anchor" href="#ruby-version-managers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ruby Version Managers</h6>
+
+<p>If you are using RVM or rbenv etc, then you will need to set the path in settings, as RVM/rbenv modify the environment path, which messes with sublimes use of the path.</p>
+
+<p>To find your path you can run <code>echo $PATH</code> on the command line. Copy the result then paste it into the RailsMagicClipboard user settings file, as shown below.</p>
+
+<div class="highlight highlight-json"><pre># Preferences/Package Settings/RailsMagicClipboard/Settings - User
+
+{
+    <span class="pl-s1"><span class="pl-pds">"</span>path<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">"</span>your/copied/path/here<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<h3>
+<a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Known Issues</h3>
+
+<p>There is an issue with the paths and RVM/rbenv. Sublime Text will not load with the correct paths to find Sass if it is not loaded from the command line. At the moment I am not sure what to do about it, and am happy to hear ideas. The same issue is occuring here <a href="https://github.com/badsyntax/SassBeautify/issues/53">https://github.com/badsyntax/SassBeautify/issues/53</a>. You can get around this by opening Sublime Text from the command line, or, if you're hardcore and want to solve the issue permanently, you can follow these instructions: <a href="http://unix.stackexchange.com/questions/89076/how-to-set-the-path-osx-applications-use/89077#89077">http://unix.stackexchange.com/questions/89076/how-to-set-the-path-osx-applications-use/89077#89077</a>.</p>
+
+<p>If you find more, create an issue or let me know on twitter (<a href="http://www.twitter.com/nmdowse" title="Nick Dowse twitter">@nmdowse</a>). Most of the hard work was done by the creators and maintainers of SassBeautify, another great Sublime Text Plugin. So, thanks to them!</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/nickdowse/RailsMagicClipboard/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/nickdowse/RailsMagicClipboard/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/nickdowse/RailsMagicClipboard"></a> is maintained by <a href="https://github.com/nickdowse">nickdowse</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
