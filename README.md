@@ -1,7 +1,7 @@
 RailsMagicClipboard
 ========
 
-Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS, CoffeeScript or HAML on your screen.
+Sublime text plugin to convert CSS, HTML or JavaScript in the clipboard to SASS, CoffeeScript or HAML on your screen. View on package control [here](https://sublime.wbond.net/packages/Rails%20Magic%20Clipboard "Rails Magic Clipboard on Package Control").
 
 ![demo](images/RailsMagicClipboard.gif)
 
