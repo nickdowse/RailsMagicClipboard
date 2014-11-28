@@ -1,13 +1,21 @@
 Hey, thanks for installing RailsMagicClipboard.
 
-To easily convert your CSS to Sass, your JavaScript to CoffeeScript, or your HTML to Haml all you need to do is copy it from somewhere, then instead of pasting it into the .css.sass, .js.coffee, or .html.haml file you want it to end up in, use the key combination super+k+v, and voila, your CSS becomes SASS, your JavaScript becomes CoffeeScript and your HTML becomes Haml.
+To easily convert your CSS to Sass, your JavaScript to CoffeeScript, or your HTML to Haml all you need to do is copy it from somewhere, then instead of pasting it into the .css.sass, .js.coffee, or .html.haml file you want it to end up in, use the key combination 'super+k+v', and voila, your CSS becomes SASS, your JavaScript becomes CoffeeScript and your HTML becomes Haml.
 
-For minimising your effort (and maximising ease of use) I recommend binding 'super+v' to the command 'rails_magic_clipboard' in your user key bindings. This will allow you to simply paste away as normal and whenever you paste any of the supported languages into a supported file it'll automatically be converted. Wow. #magic.
+For minimising your effort (and maximising ease of use) I recommend binding 'super+v' to the command 'rails_magic_clipboard' in your user key bindings.
+
+# Preferences/Key Bindings - User
+
+[
+    {
+        "keys": ["super+v"], "command": "rails_magic_clipboard"
+    }
+]
+
+This will allow you to simply paste away as normal and whenever you paste any of the supported languages into a supported file it'll automatically be converted. Wow. #magic.
 
 If you have any questions or queries please let me know at either @nmdowse or me@nickdowse.co.nz
 
 For contributing create a pull request here https://github.com/nickdowse/RailsMagicClipboard
-
-Cheers, 
 
 Nick.
