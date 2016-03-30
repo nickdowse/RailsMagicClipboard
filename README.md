@@ -57,7 +57,7 @@ If you don't have npm installed then you can follow the instructions here http:/
 
 ###### Converting HTML to HAML
 
-To use the HTML to HAML features of this plugin you need to have the HAML gem installed (`gem install haml`). If you're still having problems it might be because recently the HTML to HAML functionality has been stripped out into its own gem, unsurprisingly called html2haml. Installing the htmt2haml gem in the standard way (`gem install html2haml`) should fix the issue. If not, raise a github issue with me! Unfortunately at the moment erb flavoured HTML will not be parsed correctly.
+To use the HTML to HAML features of this plugin you need to have the HAML gem installed (`gem install haml`). If you're still having problems it might be because recently the HTML to HAML functionality has been stripped out into its own gem, unsurprisingly called html2haml. Installing the htmt2haml gem in the standard way (`gem install html2haml`) should fix the issue. If you an error about hpricot not being found when pasting HTML into a haml file try installing the hpricot gem and then restarting Sublime (`gem install hpricot`), see this issue for more info: https://github.com/haml/haml/issues/504. If you still have issues, raise a github issue with me! Unfortunately at the moment erb flavoured HTML will not be parsed correctly.
 
 ###### Ruby Version Managers
 
